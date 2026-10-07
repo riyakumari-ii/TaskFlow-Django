@@ -1,35 +1,58 @@
 # TaskFlow - Django To-Do Web Application
 
-## About
-TaskFlow is a To-Do web application developed using Python and Django.
+## About the Project
+
+TaskFlow is a simple To-Do web application developed using Python and Django.
+
+This project was created as part of a Django assignment based on the
+"ToDo webapp using Django" project listed on GeeksforGeeks.
+
+The application allows users to add and manage tasks through a simple web interface.
 
 ## Features
-- Add tasks
+
+- Add new tasks
 - View tasks
 - Manage tasks
+- Simple and user-friendly interface
 - SQLite database
+- Django templates for the web pages
 
-## Technologies
+## Technologies Used
+
 - Python
 - Django
 - HTML
 - CSS
 - SQLite
+- Git
+- GitHub
 
-## How to Run
+## Project Structure
 
-1. Install the requirements:
-pip install -r requirements.txt
-
-2. Run the server:
-python manage.py runserver
-
-3. Open:
+```text
+TaskFlow-Django/
+│
+├── taskflow/
+│   ├── settings.py
+│   ├── urls.py
+│   └── ...
+│
+├── tasks/
+│   ├── views.py
+│   ├── models.py
+│   ├── urls.py
+│   └── ...
+│
+├── templates/
+│   └── tasks/
+│       ├── task_list.html
+│       └── add_task.html
+│
+├── manage.py
+├── db.sqlite3
+├── requirements.txt
+├── .gitignore
+└── README.md
+## Open:
 http://127.0.0.1:8000/
-
-## Reference
-GeeksforGeeks - Django Projects
-https://www.geeksforgeeks.org/python/django-projects/
-
-## Author
-Riya Kumari
