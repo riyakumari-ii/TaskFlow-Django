@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TaskFlow - To-Do List</title>
+</head>
+
+<body>
+
+    <h1>TaskFlow</h1>
+    <h2>My To-Do List</h2>
+
+    <p>
+        <a href="{% url 'add_task' %}">➕ Add New Task</a>
+    </p>
+
+    {% for task in tasks %}
+
+        <hr>
+
+        <h3>{{ task.title }}</h3>
+
+        <p>{{ task.description }}</p>
+
+        {% if task.completed %}
+            <p>✅ Completed</p>
+        {% else %}
+            <p>⏳ Pending</p>
+
+            <a href="{% url 'complete_task' task.id %}">
+                Mark Complete
+            </a>
+        {% endif %}
+
+        <br><br>
+
+        <a href="{% url 'delete_task' task.id %}">
+            🗑 Delete
+        </a>
+
+    {% empty %}
+
+        <p>No tasks yet.</p>
+
+    {% endfor %}
+
+</body>
+</html>
